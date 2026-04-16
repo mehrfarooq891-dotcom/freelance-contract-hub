@@ -21,6 +21,7 @@ export default function ContractWizard({ initialType }: WizardProps) {
   
   const { register, handleSubmit, watch, formState: { errors }, trigger } = useForm<ContractData>({
     defaultValues: {
+      clientState: '',
       projectType: initialType || 'Graphic Design',
       pricingType: 'fixed',
       ipRights: 'work-for-hire',

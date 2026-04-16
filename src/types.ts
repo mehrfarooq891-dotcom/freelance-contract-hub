@@ -24,7 +24,6 @@ export interface ContractData {
   confidentiality: boolean;
   nonSolicitation: boolean;
   terminationNotice: string;
-  disputeState: string;
   revisionCount: string;
 }
 

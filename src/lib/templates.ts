@@ -36,7 +36,8 @@ export const generateContractText = (data: ContractData): string => {
   });
 
   // Bug 1 Fix: Use clientState as default for dispute resolution
-  const finalDisputeState = clientState || "the applicable state";
+  // We ensure it's never the string "undefined" or actual undefined
+  const finalDisputeState = (clientState && clientState !== 'undefined') ? clientState : "the applicable state";
 
   let ipSectionText = '';
   if (ipRights === 'work-for-hire') {
@@ -117,7 +118,7 @@ FREELANCE SERVICE AGREEMENT
 This Freelance Service Agreement (the "Agreement") is entered into as of ${today} by and between:
 
 FREELANCER: ${freelancerName}${freelancerBusinessName ? ` (${freelancerBusinessName})` : ''}, located at ${freelancerEmail} (the "Freelancer").
-CLIENT: ${clientName}${clientCompany ? ` (${clientCompany})` : ''}, located in ${clientState} (the "Client").
+CLIENT: ${clientName}${clientCompany ? ` (${clientCompany})` : ''}, located in ${clientState || 'the applicable state'} (the "Client").
 
 ${formattedSections}
 
