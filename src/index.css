@@ -52,15 +52,19 @@
 }
 
 .card-minimal {
-  @apply bg-white border border-navy/8 p-5 rounded-xl cursor-pointer transition-all duration-200;
+  @apply bg-white border border-navy/8 p-6 rounded-xl cursor-pointer transition-all duration-200 shadow-sm flex flex-col h-full;
 }
 
 .card-minimal:hover {
-  @apply border-teal -translate-y-0.5;
+  @apply border-teal -translate-y-1 shadow-md;
 }
 
 .trust-bar-minimal {
-  @apply flex flex-wrap justify-center gap-8 mb-12 p-3 bg-teal/5 rounded-full w-fit mx-auto;
+  @apply flex flex-wrap justify-center gap-4 mb-12;
+}
+
+.trust-badge {
+  @apply flex items-center gap-2 px-4 py-1.5 bg-teal/10 border border-teal/20 rounded-full text-[13px] font-bold text-teal;
 }
 
 .btn-teal-minimal {

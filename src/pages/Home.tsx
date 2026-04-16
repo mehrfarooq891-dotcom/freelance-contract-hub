@@ -44,12 +44,14 @@ export default function Home() {
       
       <main className="flex-grow relative z-10">
         {/* Hero Section */}
-        <section className="px-4 sm:px-[60px] pt-[60px] pb-10 text-center relative">
-          <div className="max-w-7xl mx-auto">
+        <section className="px-4 sm:px-[60px] pt-24 pb-16 text-center relative bg-navy text-white overflow-hidden grainy">
+          <div className="absolute top-0 right-0 w-1/3 h-full bg-teal/10 blur-3xl -skew-x-12 translate-x-1/2 pointer-events-none" />
+          
+          <div className="max-w-7xl mx-auto relative z-10">
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="text-[52px] font-display font-bold leading-[1.1] mb-4 text-navy tracking-tight"
+              className="text-5xl lg:text-7xl font-display font-bold leading-[1.1] mb-6 tracking-tight"
             >
               Create a Freelance Contract<br />in 60 Seconds
             </motion.h1>
@@ -57,7 +59,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
-              className="text-lg text-slate max-w-[600px] mx-auto mb-8 leading-[1.5]"
+              className="text-xl text-slate-300 max-w-[700px] mx-auto mb-10 leading-relaxed"
             >
               No lawyer. No signup. No stress. Just a solid contract that protects your work and gets you paid.
             </motion.p>
@@ -66,16 +68,25 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="trust-bar-minimal"
+              className="flex flex-col items-center gap-12"
             >
-              <div className="flex items-center gap-2 text-[13px] font-bold text-slate-dark">
-                <span className="text-teal text-base">✓</span> No login required
-              </div>
-              <div className="flex items-center gap-2 text-[13px] font-bold text-slate-dark">
-                <span className="text-teal text-base">✓</span> Instant PDF download
-              </div>
-              <div className="flex items-center gap-2 text-[13px] font-bold text-slate-dark">
-                <span className="text-teal text-base">✓</span> 50,000+ US Freelancers
+              <Link 
+                to="/generator" 
+                className="px-10 py-5 bg-teal text-white font-bold rounded-full hover:bg-teal-hover transition-all text-xl shadow-lg shadow-teal/20"
+              >
+                Build My Contract Free →
+              </Link>
+
+              <div className="trust-bar-minimal">
+                <div className="trust-badge">
+                  <span>✓</span> No login required
+                </div>
+                <div className="trust-badge">
+                  <span>✓</span> Instant PDF download
+                </div>
+                <div className="trust-badge">
+                  <span>✓</span> 50,000+ US Freelancers
+                </div>
               </div>
             </motion.div>
           </div>
@@ -89,7 +100,7 @@ export default function Home() {
               <p className="text-slate">Protecting your business shouldn't be complicated.</p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
               {[
                 { step: 1, title: 'Tell us about your project', desc: 'Answer a few simple questions about your work and client.', icon: Pencil },
                 { step: 2, title: 'We build your contract', desc: 'Our engine generates a legally-solid agreement in plain English.', icon: FileText },
@@ -122,9 +133,12 @@ export default function Home() {
                     {getEmojiForType(type.id)}
                   </div>
                   <h3 className="font-sans font-bold text-[15px] mb-1">{type.title}</h3>
-                  <p className="text-slate text-[12px] leading-[1.4]">
+                  <p className="text-slate text-[12px] leading-[1.4] mb-4 flex-grow">
                     {getDescriptionForType(type.id)}
                   </p>
+                  <div className="text-teal text-xs font-bold uppercase tracking-wider mt-auto">
+                    Create Free →
+                  </div>
                 </Link>
               ))}
             </div>
