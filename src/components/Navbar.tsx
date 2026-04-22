@@ -11,25 +11,24 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 bg-warm-white/80 backdrop-blur-md border-b border-navy/5 px-4 sm:px-[60px] py-6">
+    <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100 px-4 sm:px-8 py-4">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <div className="flex items-center">
           <Link to="/" className="flex items-center gap-2 group">
-            <span className="text-xl font-sans font-bold text-navy tracking-tight">
-              FreelanceContract<span className="text-teal">Hub</span>
+            <span className="text-xl font-display font-bold text-charcoal tracking-tight">
+              FreelanceContract<span className="text-purple">Hub</span>
             </span>
           </Link>
         </div>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-8">
-          <Link to="/" className="text-sm font-medium text-slate-dark hover:text-navy transition-colors">Home</Link>
-          <Link to="/#contract-types" className="text-sm font-medium text-slate-dark hover:text-navy transition-colors">Contract Types</Link>
-          <Link to="/state-contracts" className="text-sm font-medium text-slate-dark hover:text-navy transition-colors">State Contracts</Link>
-          <Link to="/faq" className="text-sm font-medium text-slate-dark hover:text-navy transition-colors">FAQ</Link>
+          <Link to="/" className="text-sm font-medium text-charcoal/70 hover:text-purple transition-colors">Home</Link>
+          <Link to="/about" className="text-sm font-medium text-charcoal/70 hover:text-purple transition-colors">About</Link>
+          <Link to="/faq" className="text-sm font-medium text-charcoal/70 hover:text-purple transition-colors">FAQ</Link>
           <Link 
             to="/generator" 
-            className="btn-teal-minimal"
+            className="btn-purple !text-sm !py-2 !px-5"
           >
             Create Free Contract
           </Link>
@@ -39,7 +38,7 @@ export default function Navbar() {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-navy p-2 focus:outline-none"
+              className="text-charcoal p-2 focus:outline-none"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -48,13 +47,13 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-warm-white border-b border-navy/5 px-4 pt-2 pb-6 space-y-2">
-          <Link to="/" className="block px-3 py-2 text-base font-medium text-navy/70 hover:text-navy" onClick={() => setIsOpen(false)}>Home</Link>
-          <Link to="/#contract-types" className="block px-3 py-2 text-base font-medium text-navy/70 hover:text-navy" onClick={() => setIsOpen(false)}>Contract Types</Link>
-          <Link to="/faq" className="block px-3 py-2 text-base font-medium text-navy/70 hover:text-navy" onClick={() => setIsOpen(false)}>FAQ</Link>
+        <div className="md:hidden bg-white border-b border-slate-100 px-4 pt-2 pb-6 space-y-2">
+          <Link to="/" className="block px-3 py-2 text-base font-medium text-charcoal/70 hover:text-purple" onClick={() => setIsOpen(false)}>Home</Link>
+          <Link to="/about" className="block px-3 py-2 text-base font-medium text-charcoal/70 hover:text-purple" onClick={() => setIsOpen(false)}>About</Link>
+          <Link to="/faq" className="block px-3 py-2 text-base font-medium text-charcoal/70 hover:text-purple" onClick={() => setIsOpen(false)}>FAQ</Link>
           <Link 
             to="/generator" 
-            className="block w-full text-center px-4 py-3 bg-teal text-white font-semibold rounded-xl"
+            className="block w-full text-center px-4 py-3 bg-purple text-white font-semibold rounded-xl"
             onClick={() => setIsOpen(false)}
           >
             Create Free Contract

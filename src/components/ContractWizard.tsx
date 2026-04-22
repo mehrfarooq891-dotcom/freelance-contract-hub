@@ -85,7 +85,7 @@ export default function ContractWizard({ initialType }: WizardProps) {
                 <input 
                   {...register('freelancerName', { required: 'Name is required' })}
                   placeholder="e.g. Jane Doe"
-                  className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-teal focus:ring-2 focus:ring-teal/20 outline-none transition-all"
+                  className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-purple focus:ring-2 focus:ring-purple/20 outline-none transition-all"
                 />
                 {errors.freelancerName && <span className="text-red-500 text-xs mt-1">{errors.freelancerName.message}</span>}
               </div>
@@ -94,7 +94,7 @@ export default function ContractWizard({ initialType }: WizardProps) {
                 <input 
                   {...register('freelancerBusinessName')}
                   placeholder="e.g. JD Design Studio"
-                  className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-teal focus:ring-2 focus:ring-teal/20 outline-none transition-all"
+                  className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-purple focus:ring-2 focus:ring-purple/20 outline-none transition-all"
                 />
               </div>
               <div>
@@ -105,7 +105,7 @@ export default function ContractWizard({ initialType }: WizardProps) {
                     pattern: { value: /^\S+@\S+$/i, message: 'Invalid email' }
                   })}
                   placeholder="jane@example.com"
-                  className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-teal focus:ring-2 focus:ring-teal/20 outline-none transition-all"
+                  className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-purple focus:ring-2 focus:ring-purple/20 outline-none transition-all"
                 />
                 {errors.freelancerEmail && <span className="text-red-500 text-xs mt-1">{errors.freelancerEmail.message}</span>}
               </div>
@@ -130,7 +130,7 @@ export default function ContractWizard({ initialType }: WizardProps) {
                 <input 
                   {...register('clientName', { required: 'Client name is required' })}
                   placeholder="e.g. Acme Corp"
-                  className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-teal focus:ring-2 focus:ring-teal/20 outline-none transition-all"
+                  className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-purple focus:ring-2 focus:ring-purple/20 outline-none transition-all"
                 />
               </div>
               <div>
@@ -138,14 +138,14 @@ export default function ContractWizard({ initialType }: WizardProps) {
                 <input 
                   {...register('clientEmail', { required: 'Client email is required' })}
                   placeholder="client@example.com"
-                  className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-teal focus:ring-2 focus:ring-teal/20 outline-none transition-all"
+                  className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-purple focus:ring-2 focus:ring-purple/20 outline-none transition-all"
                 />
               </div>
               <div>
                 <label className="block text-sm font-semibold mb-1">Client's State</label>
                 <select 
                   {...register('clientState', { required: 'State is required' })}
-                  className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-teal focus:ring-2 focus:ring-teal/20 outline-none transition-all bg-white"
+                  className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-purple focus:ring-2 focus:ring-purple/20 outline-none transition-all bg-white"
                 >
                   <option value="">Select a state</option>
                   {US_STATES.map(state => <option key={state} value={state}>{state}</option>)}
@@ -171,7 +171,7 @@ export default function ContractWizard({ initialType }: WizardProps) {
                 <label className="block text-sm font-semibold mb-1">Type of Work</label>
                 <select 
                   {...register('projectType')}
-                  className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-teal focus:ring-2 focus:ring-teal/20 outline-none transition-all bg-white"
+                  className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-purple focus:ring-2 focus:ring-purple/20 outline-none transition-all bg-white"
                 >
                   {PROJECT_TYPES.map(type => <option key={type} value={type}>{type}</option>)}
                 </select>
@@ -182,7 +182,7 @@ export default function ContractWizard({ initialType }: WizardProps) {
                   {...register('projectDescription', { required: 'Description is required' })}
                   placeholder="e.g. Design a new logo and brand identity package for a food startup..."
                   rows={3}
-                  className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-teal focus:ring-2 focus:ring-teal/20 outline-none transition-all"
+                  className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-purple focus:ring-2 focus:ring-purple/20 outline-none transition-all"
                 />
               </div>
               <div>
@@ -191,7 +191,7 @@ export default function ContractWizard({ initialType }: WizardProps) {
                   {...register('deliverables', { required: 'Deliverables are required' })}
                   placeholder="e.g. 1x Logo (SVG, PNG), 1x Brand Guidelines PDF"
                   rows={2}
-                  className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-teal focus:ring-2 focus:ring-teal/20 outline-none transition-all"
+                  className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-purple focus:ring-2 focus:ring-purple/20 outline-none transition-all"
                 />
               </div>
               <div className="grid grid-cols-2 gap-4">
@@ -223,13 +223,13 @@ export default function ContractWizard({ initialType }: WizardProps) {
               <div className="flex gap-4">
                 <label className="flex-1 cursor-pointer">
                   <input type="radio" value="fixed" {...register('pricingType')} className="hidden peer" />
-                  <div className="p-4 border-2 border-slate-200 rounded-xl peer-checked:border-teal peer-checked:bg-teal/5 transition-all text-center">
+                  <div className="p-4 border-2 border-slate-200 rounded-xl peer-checked:border-purple peer-checked:bg-purple/5 transition-all text-center">
                     <span className="font-semibold">Fixed Price</span>
                   </div>
                 </label>
                 <label className="flex-1 cursor-pointer">
                   <input type="radio" value="hourly" {...register('pricingType')} className="hidden peer" />
-                  <div className="p-4 border-2 border-slate-200 rounded-xl peer-checked:border-teal peer-checked:bg-teal/5 transition-all text-center">
+                  <div className="p-4 border-2 border-slate-200 rounded-xl peer-checked:border-purple peer-checked:bg-purple/5 transition-all text-center">
                     <span className="font-semibold">Hourly Rate</span>
                   </div>
                 </label>
@@ -240,14 +240,14 @@ export default function ContractWizard({ initialType }: WizardProps) {
                   type="number"
                   {...register('amount', { required: 'Amount is required' })}
                   placeholder="0.00"
-                  className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-teal focus:ring-2 focus:ring-teal/20 outline-none transition-all"
+                  className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-purple focus:ring-2 focus:ring-purple/20 outline-none transition-all"
                 />
               </div>
               <div>
                 <label className="block text-sm font-semibold mb-1">Payment Schedule</label>
                 <select 
                   {...register('paymentSchedule')}
-                  className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-teal focus:ring-2 focus:ring-teal/20 outline-none transition-all bg-white"
+                  className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-purple focus:ring-2 focus:ring-purple/20 outline-none transition-all bg-white"
                 >
                   <option value="50% upfront, 50% on delivery">50% upfront, 50% on delivery</option>
                   <option value="100% upfront">100% upfront</option>
@@ -257,7 +257,7 @@ export default function ContractWizard({ initialType }: WizardProps) {
                 </select>
               </div>
               <div className="flex items-center gap-3 p-4 bg-slate-50 rounded-xl">
-                <input type="checkbox" {...register('lateFee')} id="lateFee" className="w-5 h-5 accent-teal" />
+                <input type="checkbox" {...register('lateFee')} id="lateFee" className="w-5 h-5 accent-purple" />
                 <label htmlFor="lateFee" className="text-sm font-medium">Apply 1.5% monthly late fee to overdue balances</label>
               </div>
             </div>
@@ -281,29 +281,29 @@ export default function ContractWizard({ initialType }: WizardProps) {
                   Who owns the final work?
                   <div className="group relative">
                     <Info className="w-4 h-4 text-slate-400 cursor-help" />
-                    <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-64 p-3 bg-navy text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-10">
+                    <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-64 p-3 bg-charcoal text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-10">
                       Work-for-hire means once you're paid, the client owns everything. A license means you still own it.
                     </div>
                   </div>
                 </label>
                 <div className="space-y-2">
                   <label className="flex items-center gap-3 p-3 border border-slate-200 rounded-xl cursor-pointer hover:bg-slate-50 transition-colors">
-                    <input type="radio" value="work-for-hire" {...register('ipRights')} className="w-4 h-4 accent-teal" />
+                    <input type="radio" value="work-for-hire" {...register('ipRights')} className="w-4 h-4 accent-purple" />
                     <span className="text-sm">Work-for-Hire (Full rights to client)</span>
                   </label>
                   <label className="flex items-center gap-3 p-3 border border-slate-200 rounded-xl cursor-pointer hover:bg-slate-50 transition-colors">
-                    <input type="radio" value="license" {...register('ipRights')} className="w-4 h-4 accent-teal" />
+                    <input type="radio" value="license" {...register('ipRights')} className="w-4 h-4 accent-purple" />
                     <span className="text-sm">License (You keep ownership)</span>
                   </label>
                 </div>
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div className="flex items-center gap-3 p-4 bg-slate-50 rounded-xl">
-                  <input type="checkbox" {...register('confidentiality')} id="conf" className="w-5 h-5 accent-teal" />
+                  <input type="checkbox" {...register('confidentiality')} id="conf" className="w-5 h-5 accent-purple" />
                   <label htmlFor="conf" className="text-sm font-medium">Confidentiality</label>
                 </div>
                 <div className="flex items-center gap-3 p-4 bg-slate-50 rounded-xl">
-                  <input type="checkbox" {...register('nonSolicitation')} id="nonsol" className="w-5 h-5 accent-teal" />
+                  <input type="checkbox" {...register('nonSolicitation')} id="nonsol" className="w-5 h-5 accent-purple" />
                   <label htmlFor="nonsol" className="text-sm font-medium">Non-solicitation</label>
                 </div>
               </div>
@@ -337,14 +337,14 @@ export default function ContractWizard({ initialType }: WizardProps) {
             <div className="flex flex-col sm:flex-row gap-3">
               <button 
                 onClick={handleSubmit(onSubmit)}
-                className="flex-1 flex items-center justify-center gap-2 bg-teal text-white py-4 rounded-xl font-bold hover:bg-teal-hover transition-all shadow-lg shadow-teal/20"
+                className="flex-1 flex items-center justify-center gap-2 bg-purple text-white py-4 rounded-xl font-bold hover:bg-purple-hover transition-all shadow-lg shadow-purple/20"
               >
                 <Download className="w-5 h-5" />
                 Download PDF
               </button>
               <button 
                 onClick={copyToClipboard}
-                className="flex-1 flex items-center justify-center gap-2 bg-navy text-white py-4 rounded-xl font-bold hover:bg-navy/90 transition-all"
+                className="flex-1 flex items-center justify-center gap-2 bg-charcoal text-white py-4 rounded-xl font-bold hover:bg-charcoal/90 transition-all"
               >
                 <Copy className="w-5 h-5" />
                 Copy as Text
@@ -364,8 +364,8 @@ export default function ContractWizard({ initialType }: WizardProps) {
   if (isComplete) {
     return (
       <div className="text-center space-y-6 py-12">
-        <div className="inline-flex items-center justify-center w-20 h-20 bg-teal/10 rounded-full mb-4">
-          <CheckCircle2 className="w-10 h-10 text-teal" />
+        <div className="inline-flex items-center justify-center w-20 h-20 bg-purple/10 rounded-full mb-4">
+          <CheckCircle2 className="w-10 h-10 text-purple" />
         </div>
         <h2 className="text-3xl font-display font-bold">Contract Generated!</h2>
         <p className="text-slate-500 max-w-md mx-auto">
@@ -373,7 +373,7 @@ export default function ContractWizard({ initialType }: WizardProps) {
         </p>
         <button 
           onClick={() => { setIsComplete(false); setStep(1); }}
-          className="text-teal font-semibold hover:underline"
+          className="text-purple font-semibold hover:underline"
         >
           Create another contract
         </button>
@@ -388,7 +388,7 @@ export default function ContractWizard({ initialType }: WizardProps) {
         {[1, 2, 3, 4, 5, 6].map(i => (
           <div 
             key={i} 
-            className={`flex-1 transition-all duration-500 ${i <= step ? 'bg-teal' : 'bg-transparent'}`}
+            className={`flex-1 transition-all duration-500 ${i <= step ? 'bg-purple' : 'bg-transparent'}`}
           />
         ))}
       </div>
@@ -412,7 +412,7 @@ export default function ContractWizard({ initialType }: WizardProps) {
           {step < 6 && (
             <button 
               onClick={nextStep}
-              className="flex items-center gap-2 bg-navy text-white px-8 py-3 rounded-full font-bold hover:bg-navy/90 transition-all"
+              className="flex items-center gap-2 bg-charcoal text-white px-8 py-3 rounded-full font-bold hover:bg-charcoal/90 transition-all"
             >
               Next
               <ChevronRight className="w-5 h-5" />
