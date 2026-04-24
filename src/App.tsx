@@ -8,6 +8,7 @@ import { HelmetProvider, Helmet } from 'react-helmet-async';
 import Home from './pages/Home';
 import GeneratorPage from './pages/GeneratorPage';
 import About from './pages/About';
+import Contact from './pages/Contact';
 import FAQ from './pages/FAQ';
 import LegalDisclaimer from './pages/LegalDisclaimer';
 
@@ -26,6 +27,7 @@ export default function App() {
           <Route path="/generator" element={<GeneratorPage />} />
           <Route path="/contract/:type" element={<GeneratorPage />} />
           <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/legal-disclaimer" element={<LegalDisclaimer />} />
           {/* Fallback to home for now */}

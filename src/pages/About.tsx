@@ -12,6 +12,7 @@ import {
   CheckCircle2,
   ShieldAlert
 } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
@@ -31,6 +32,10 @@ export default function About() {
 
   return (
     <div className="min-h-screen flex flex-col bg-white">
+      <Helmet>
+        <title>About Us | FreelanceContractHub.com</title>
+        <meta name="description" content="Learn more about FreelanceContractHub, a 100% free freelance contract generator for US independent contractors. No signup, no fees, instant legal protection." />
+      </Helmet>
       <Navbar />
       
       <main className="flex-grow">
@@ -62,7 +67,7 @@ export default function About() {
             <div className="w-full md:w-1/3 shrink-0">
               <div className="sticky top-32">
                 <img 
-                  src="https://randomuser.me/api/portraits/women/33.jpg" 
+                  src="https://i.postimg.cc/DZKz2fB8/jessica-park.png" 
                   alt="Jessica Park" 
                   className="w-full aspect-square object-cover rounded-[32px] border-8 border-slate-50 shadow-xl"
                 />

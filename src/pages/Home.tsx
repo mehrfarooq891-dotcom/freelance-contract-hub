@@ -186,9 +186,9 @@ export default function Home() {
         <section className="py-24 px-4 sm:px-8">
           <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-12 bg-slate-50 p-12 rounded-[32px]">
             <img 
-              src="https://randomuser.me/api/portraits/women/33.jpg" 
+              src="https://i.postimg.cc/DZKz2fB8/jessica-park.png" 
               alt="Jessica Park" 
-              className="w-32 h-32 rounded-full border-4 border-white shadow-lg shrink-0"
+              className="w-32 h-32 rounded-full border-4 border-white shadow-lg shrink-0 object-cover"
             />
             <div className="flex-grow">
               <div className="text-purple font-bold uppercase tracking-widest text-xs mb-4">Meet our specialist</div>
