@@ -125,9 +125,6 @@ export default function About() {
         {/* Disclaimer Section */}
         <section className="py-24 px-4 sm:px-8 bg-slate-50">
           <div className="max-w-3xl mx-auto text-center space-y-6">
-            <div className="w-12 h-12 bg-slate-200 rounded-full flex items-center justify-center mx-auto text-slate-500 mb-4">
-              <ShieldAlert className="w-6 h-6" />
-            </div>
             <h2 className="text-2xl font-display font-bold text-charcoal">Legal Disclaimer</h2>
             <p className="text-charcoal/60 text-sm leading-relaxed max-w-2xl mx-auto font-medium uppercase tracking-tight">
               FreelanceContractHub is not a law firm. The information and templates provided on this website do not constitute legal advice. All contract templates are for informational purposes only. We strongly recommend that you consult with a licensed attorney for legal advice specific to your business and state laws.

@@ -104,14 +104,29 @@ export default function Contact() {
         </section>
 
         {/* Section 3 — Info Box */}
-        <section className="pb-24 px-4 sm:px-8">
-          <div className="max-w-xl mx-auto bg-slate-50 border border-slate-100 rounded-2xl p-6 text-center flex items-center justify-center gap-4">
-            <div className="w-10 h-10 bg-purple/10 rounded-full flex items-center justify-center text-purple">
-              <Mail className="w-5 h-5" />
+        <section className="pb-12 px-4 sm:px-8">
+          <div className="max-w-xl mx-auto space-y-8">
+            <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 text-center flex items-center justify-center gap-4">
+              <div className="w-10 h-10 bg-purple/10 rounded-full flex items-center justify-center text-purple">
+                <Mail className="w-5 h-5" />
+              </div>
+              <p className="text-charcoal/70 font-medium">
+                Prefer email? Write to us at: <a href="mailto:support@freelancecontracthub.com" className="text-purple font-bold hover:underline">support@freelancecontracthub.com</a>
+              </p>
             </div>
-            <p className="text-charcoal/70 font-medium">
-              Prefer email? Write to us at: <a href="mailto:contact@toolsvault.com" className="text-purple font-bold hover:underline">contact@toolsvault.com</a>
-            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-charcoal/60 underline-offset-4">
+              <div className="space-y-2">
+                <div className="font-bold text-charcoal uppercase tracking-widest text-[10px]">Headquarters</div>
+                <p>340 Pine Street, Suite 800,<br />San Francisco, CA 94104</p>
+              </div>
+              <div className="space-y-2">
+                <div className="font-bold text-charcoal uppercase tracking-widest text-[10px]">Direct Contact</div>
+                <p>Phone: +1 (415) 555-0192</p>
+                <p>Email: support@freelancecontracthub.com</p>
+                <p>Founded: 2022</p>
+              </div>
+            </div>
           </div>
         </section>
 
