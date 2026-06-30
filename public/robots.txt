@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://freelancecontracthub.com/sitemap.xml
+Sitemap: https://freelance-contract-hub.vercel.app/sitemap.xml
